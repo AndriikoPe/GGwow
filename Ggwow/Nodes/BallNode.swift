@@ -13,11 +13,12 @@ class BallNode: SKSpriteNode {
     }
     
     init(radius: CGFloat, enabled: Bool = false) {
-        super.init(texture: nil, color: .clear, size: CGSize(width: radius * 2, height: radius * 2))
+        super.init(texture: nil, color: .clear, size:
+                    CGSize(width: radius * 2, height: radius * 2))
         
-        let ball = SKShapeNode(circleOfRadius: radius)
-        ball.fillColor = .systemBlue
-        ball.strokeColor = .systemBlue
+        let texture = SKTexture(imageNamed: "shield")
+        let ball = SKSpriteNode(texture: texture, size: size)
+        ball.zPosition = 20
         addChild(ball)
         
         if enabled { enable() }
@@ -30,9 +31,25 @@ class BallNode: SKSpriteNode {
         physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2.0)
         physicsBody?.categoryBitMask = Collisions.ball.rawValue
         physicsBody?.collisionBitMask = Collisions.umbrella.rawValue | Collisions.wall.rawValue
-        physicsBody?.contactTestBitMask = Collisions.umbrella.rawValue | Collisions.wall.rawValue | Collisions.ground.rawValue
+        physicsBody?.contactTestBitMask = Collisions.umbrella.rawValue |
+            Collisions.wall.rawValue |
+            Collisions.ground.rawValue
         physicsBody?.usesPreciseCollisionDetection = true
         physicsBody?.mass = 0.01
+        
+        addSparks()
+        
+        physicsBody?.applyImpulse(
+            CGVector(dx: CGFloat.random(in: -5...5),  dy: 10)
+        )
+        run(Sounds.launch)
+    }
+    
+    private func addSparks() {
+        guard let sparks = SKEmitterNode(fileNamed: "SparkParticle") else { return }
+        sparks.zPosition = 10
+        sparks.targetNode = scene
+        addChild(sparks)
     }
     
     required init?(coder aDecoder: NSCoder) {

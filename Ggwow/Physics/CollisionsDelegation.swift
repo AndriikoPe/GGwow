@@ -10,31 +10,27 @@ import SpriteKit
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
-        
-        let (ball, other) = contact.bodyA.categoryBitMask <
-            contact.bodyB.categoryBitMask ?
-        (contact.bodyA, contact.bodyB) : (contact.bodyB, contact.bodyA)
 
         switch contactMask {
         case ContactType.ballUmbrella.rawValue:
-            ballUmbrella(ball, other)
+            ballUmbrella()
         case ContactType.ballWall.rawValue:
-            ballWall(ball, other)
+            ballWall()
         case ContactType.ballGround.rawValue:
-            ballGround(ball, other)
+            ballGround()
         default: break
         }
     }
     
-    private func ballUmbrella(_ ball: SKPhysicsBody, _ umbrella: SKPhysicsBody) {
-
+    private func ballUmbrella() {
+        run(Sounds.impactUmbrella)
     }
     
-    private func ballWall(_ ball: SKPhysicsBody, _ wall: SKPhysicsBody) {
-        
+    private func ballWall() {
+        run(Sounds.impactWall)
     }
     
-    private func ballGround(_ ball: SKPhysicsBody, _ ground: SKPhysicsBody) {
+    private func ballGround() {
         
     }
 }

@@ -12,7 +12,7 @@ class GameScene: SKScene {
     private var ballNode: BallNode!
     
     private let minDX: CGFloat = 0.1
-    private let ballRadius: CGFloat = 20.0
+    private let ballRadius: CGFloat = 30.0
     private let umbrellaSize = CGSize(width: 80, height: 80)
     
     private var lastTouchX: CGFloat = 0.0

@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		7F4E589728508CAE00704EE2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E589628508CAE00704EE2 /* Extensions.swift */; };
 		7F987FE5284FDD22004A7717 /* CollisionsDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F987FE4284FDD22004A7717 /* CollisionsDelegation.swift */; };
+		7FA1DF0B2850ECE300CADAAC /* SparkParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF092850ECE300CADAAC /* SparkParticle.sks */; };
+		7FA1DF0C2850ECE300CADAAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF0A2850ECE300CADAAC /* Assets.xcassets */; };
+		7FA1DF1D2850F67700CADAAC /* umbrellaImpact1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF182850F67700CADAAC /* umbrellaImpact1.mp3 */; };
+		7FA1DF1E2850F67700CADAAC /* umbrellaImpact2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF192850F67700CADAAC /* umbrellaImpact2.mp3 */; };
+		7FA1DF1F2850F67700CADAAC /* umbrellaImpact5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF1A2850F67700CADAAC /* umbrellaImpact5.mp3 */; };
+		7FA1DF202850F67700CADAAC /* umbrellaImpact3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF1B2850F67700CADAAC /* umbrellaImpact3.mp3 */; };
+		7FA1DF212850F67700CADAAC /* umbrellaImpact4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF1C2850F67700CADAAC /* umbrellaImpact4.mp3 */; };
+		7FA1DF232850F67E00CADAAC /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF222850F67E00CADAAC /* launch.mp3 */; };
+		7FA1DF252850F69100CADAAC /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1DF242850F69100CADAAC /* Sounds.swift */; };
+		7FA1DF2B2850FE4400CADAAC /* impact2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF262850FE4400CADAAC /* impact2.mp3 */; };
+		7FA1DF2C2850FE4400CADAAC /* impact3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF272850FE4400CADAAC /* impact3.mp3 */; };
+		7FA1DF2D2850FE4400CADAAC /* impact1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF282850FE4400CADAAC /* impact1.mp3 */; };
+		7FA1DF2E2850FE4400CADAAC /* impact4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF292850FE4400CADAAC /* impact4.mp3 */; };
+		7FA1DF2F2850FE4400CADAAC /* impact5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF2A2850FE4400CADAAC /* impact5.mp3 */; };
 		7FA4535528509D77008170C7 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4535428509D77008170C7 /* WallNode.swift */; };
 		7FF30EE1284F8FB90014DEB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */; };
 		7FF30EE3284F8FB90014DEB4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7FF30EE2284F8FB90014DEB4 /* GameScene.sks */; };
@@ -25,6 +39,20 @@
 /* Begin PBXFileReference section */
 		7F4E589628508CAE00704EE2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7F987FE4284FDD22004A7717 /* CollisionsDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionsDelegation.swift; sourceTree = "<group>"; };
+		7FA1DF092850ECE300CADAAC /* SparkParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticle.sks; sourceTree = "<group>"; };
+		7FA1DF0A2850ECE300CADAAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FA1DF182850F67700CADAAC /* umbrellaImpact1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = umbrellaImpact1.mp3; sourceTree = "<group>"; };
+		7FA1DF192850F67700CADAAC /* umbrellaImpact2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = umbrellaImpact2.mp3; sourceTree = "<group>"; };
+		7FA1DF1A2850F67700CADAAC /* umbrellaImpact5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = umbrellaImpact5.mp3; sourceTree = "<group>"; };
+		7FA1DF1B2850F67700CADAAC /* umbrellaImpact3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = umbrellaImpact3.mp3; sourceTree = "<group>"; };
+		7FA1DF1C2850F67700CADAAC /* umbrellaImpact4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = umbrellaImpact4.mp3; sourceTree = "<group>"; };
+		7FA1DF222850F67E00CADAAC /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = launch.mp3; sourceTree = "<group>"; };
+		7FA1DF242850F69100CADAAC /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		7FA1DF262850FE4400CADAAC /* impact2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact2.mp3; sourceTree = "<group>"; };
+		7FA1DF272850FE4400CADAAC /* impact3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact3.mp3; sourceTree = "<group>"; };
+		7FA1DF282850FE4400CADAAC /* impact1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact1.mp3; sourceTree = "<group>"; };
+		7FA1DF292850FE4400CADAAC /* impact4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact4.mp3; sourceTree = "<group>"; };
+		7FA1DF2A2850FE4400CADAAC /* impact5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact5.mp3; sourceTree = "<group>"; };
 		7FA4535428509D77008170C7 /* WallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallNode.swift; sourceTree = "<group>"; };
 		7FF30EDD284F8FB90014DEB4 /* Ggwow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ggwow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +82,27 @@
 			isa = PBXGroup;
 			children = (
 				7F4E589628508CAE00704EE2 /* Extensions.swift */,
+				7FA1DF242850F69100CADAAC /* Sounds.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7FA1DF0D2850F5D800CADAAC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1DF282850FE4400CADAAC /* impact1.mp3 */,
+				7FA1DF262850FE4400CADAAC /* impact2.mp3 */,
+				7FA1DF272850FE4400CADAAC /* impact3.mp3 */,
+				7FA1DF292850FE4400CADAAC /* impact4.mp3 */,
+				7FA1DF2A2850FE4400CADAAC /* impact5.mp3 */,
+				7FA1DF222850F67E00CADAAC /* launch.mp3 */,
+				7FA1DF182850F67700CADAAC /* umbrellaImpact1.mp3 */,
+				7FA1DF192850F67700CADAAC /* umbrellaImpact2.mp3 */,
+				7FA1DF1B2850F67700CADAAC /* umbrellaImpact3.mp3 */,
+				7FA1DF1C2850F67700CADAAC /* umbrellaImpact4.mp3 */,
+				7FA1DF1A2850F67700CADAAC /* umbrellaImpact5.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		7FF30ED4284F8FB90014DEB4 = {
@@ -77,12 +124,13 @@
 		7FF30EDF284F8FB90014DEB4 /* Ggwow */ = {
 			isa = PBXGroup;
 			children = (
-				7F4E589828508CB800704EE2 /* Utilities */,
 				7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */,
+				7FA1DF0D2850F5D800CADAAC /* Sounds */,
 				7FF30EFB284F97630014DEB4 /* Scenes */,
 				7FF30EF9284F97530014DEB4 /* Nodes */,
 				7FF30EFA284F975A0014DEB4 /* Constrollers */,
 				7FF30F00284F9FA30014DEB4 /* Physics */,
+				7F4E589828508CB800704EE2 /* Utilities */,
 				7FF30EEA284F8FB90014DEB4 /* Main.storyboard */,
 				7FF30EED284F8FBB0014DEB4 /* Assets.xcassets */,
 				7FF30EEF284F8FBB0014DEB4 /* LaunchScreen.storyboard */,
@@ -94,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				7FF30EF7284F96F10014DEB4 /* BallNode.swift */,
+				7FA1DF092850ECE300CADAAC /* SparkParticle.sks */,
+				7FA1DF0A2850ECE300CADAAC /* Assets.xcassets */,
 				7FF30EFC284F9CCD0014DEB4 /* UmbrellaNode.swift */,
 				7FA4535428509D77008170C7 /* WallNode.swift */,
 			);
@@ -185,9 +235,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FF30EEC284F8FB90014DEB4 /* Main.storyboard in Resources */,
+				7FA1DF1E2850F67700CADAAC /* umbrellaImpact2.mp3 in Resources */,
 				7FF30EE3284F8FB90014DEB4 /* GameScene.sks in Resources */,
+				7FA1DF232850F67E00CADAAC /* launch.mp3 in Resources */,
 				7FF30EEE284F8FBB0014DEB4 /* Assets.xcassets in Resources */,
+				7FA1DF202850F67700CADAAC /* umbrellaImpact3.mp3 in Resources */,
+				7FA1DF2B2850FE4400CADAAC /* impact2.mp3 in Resources */,
+				7FA1DF2E2850FE4400CADAAC /* impact4.mp3 in Resources */,
+				7FA1DF1D2850F67700CADAAC /* umbrellaImpact1.mp3 in Resources */,
+				7FA1DF2F2850FE4400CADAAC /* impact5.mp3 in Resources */,
 				7FF30EF1284F8FBB0014DEB4 /* LaunchScreen.storyboard in Resources */,
+				7FA1DF0C2850ECE300CADAAC /* Assets.xcassets in Resources */,
+				7FA1DF2D2850FE4400CADAAC /* impact1.mp3 in Resources */,
+				7FA1DF2C2850FE4400CADAAC /* impact3.mp3 in Resources */,
+				7FA1DF1F2850F67700CADAAC /* umbrellaImpact5.mp3 in Resources */,
+				7FA1DF212850F67700CADAAC /* umbrellaImpact4.mp3 in Resources */,
+				7FA1DF0B2850ECE300CADAAC /* SparkParticle.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +268,7 @@
 				7F987FE5284FDD22004A7717 /* CollisionsDelegation.swift in Sources */,
 				7FF30EE1284F8FB90014DEB4 /* AppDelegate.swift in Sources */,
 				7FF30EFF284F9F920014DEB4 /* Collisions+Contacts.swift in Sources */,
+				7FA1DF252850F69100CADAAC /* Sounds.swift in Sources */,
 				7FF30EFD284F9CCD0014DEB4 /* UmbrellaNode.swift in Sources */,
 				7FA4535528509D77008170C7 /* WallNode.swift in Sources */,
 			);
