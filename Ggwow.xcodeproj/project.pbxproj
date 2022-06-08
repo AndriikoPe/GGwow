@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F4E589728508CAE00704EE2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E589628508CAE00704EE2 /* Extensions.swift */; };
+		7F987FE5284FDD22004A7717 /* CollisionsDelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F987FE4284FDD22004A7717 /* CollisionsDelegation.swift */; };
+		7FA4535528509D77008170C7 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4535428509D77008170C7 /* WallNode.swift */; };
 		7FF30EE1284F8FB90014DEB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */; };
 		7FF30EE3284F8FB90014DEB4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7FF30EE2284F8FB90014DEB4 /* GameScene.sks */; };
 		7FF30EE7284F8FB90014DEB4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EE6284F8FB90014DEB4 /* GameScene.swift */; };
@@ -16,10 +19,13 @@
 		7FF30EF1284F8FBB0014DEB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF30EEF284F8FBB0014DEB4 /* LaunchScreen.storyboard */; };
 		7FF30EF8284F96F10014DEB4 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EF7284F96F10014DEB4 /* BallNode.swift */; };
 		7FF30EFD284F9CCD0014DEB4 /* UmbrellaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EFC284F9CCD0014DEB4 /* UmbrellaNode.swift */; };
-		7FF30EFF284F9F920014DEB4 /* Collisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EFE284F9F920014DEB4 /* Collisions.swift */; };
+		7FF30EFF284F9F920014DEB4 /* Collisions+Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EFE284F9F920014DEB4 /* Collisions+Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F4E589628508CAE00704EE2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7F987FE4284FDD22004A7717 /* CollisionsDelegation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionsDelegation.swift; sourceTree = "<group>"; };
+		7FA4535428509D77008170C7 /* WallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallNode.swift; sourceTree = "<group>"; };
 		7FF30EDD284F8FB90014DEB4 /* Ggwow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ggwow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF30EE2284F8FB90014DEB4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -30,7 +36,7 @@
 		7FF30EF0284F8FBB0014DEB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FF30EF7284F96F10014DEB4 /* BallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
 		7FF30EFC284F9CCD0014DEB4 /* UmbrellaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaNode.swift; sourceTree = "<group>"; };
-		7FF30EFE284F9F920014DEB4 /* Collisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collisions.swift; sourceTree = "<group>"; };
+		7FF30EFE284F9F920014DEB4 /* Collisions+Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collisions+Contacts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F4E589828508CB800704EE2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7F4E589628508CAE00704EE2 /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		7FF30ED4284F8FB90014DEB4 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +77,7 @@
 		7FF30EDF284F8FB90014DEB4 /* Ggwow */ = {
 			isa = PBXGroup;
 			children = (
+				7F4E589828508CB800704EE2 /* Utilities */,
 				7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */,
 				7FF30EFB284F97630014DEB4 /* Scenes */,
 				7FF30EF9284F97530014DEB4 /* Nodes */,
@@ -80,6 +95,7 @@
 			children = (
 				7FF30EF7284F96F10014DEB4 /* BallNode.swift */,
 				7FF30EFC284F9CCD0014DEB4 /* UmbrellaNode.swift */,
+				7FA4535428509D77008170C7 /* WallNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -104,7 +120,8 @@
 		7FF30F00284F9FA30014DEB4 /* Physics */ = {
 			isa = PBXGroup;
 			children = (
-				7FF30EFE284F9F920014DEB4 /* Collisions.swift */,
+				7FF30EFE284F9F920014DEB4 /* Collisions+Contacts.swift */,
+				7F987FE4284FDD22004A7717 /* CollisionsDelegation.swift */,
 			);
 			path = Physics;
 			sourceTree = "<group>";
@@ -184,9 +201,12 @@
 				7FF30EE7284F8FB90014DEB4 /* GameScene.swift in Sources */,
 				7FF30EE9284F8FB90014DEB4 /* GameViewController.swift in Sources */,
 				7FF30EF8284F96F10014DEB4 /* BallNode.swift in Sources */,
+				7F4E589728508CAE00704EE2 /* Extensions.swift in Sources */,
+				7F987FE5284FDD22004A7717 /* CollisionsDelegation.swift in Sources */,
 				7FF30EE1284F8FB90014DEB4 /* AppDelegate.swift in Sources */,
-				7FF30EFF284F9F920014DEB4 /* Collisions.swift in Sources */,
+				7FF30EFF284F9F920014DEB4 /* Collisions+Contacts.swift in Sources */,
 				7FF30EFD284F9CCD0014DEB4 /* UmbrellaNode.swift in Sources */,
+				7FA4535528509D77008170C7 /* WallNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
