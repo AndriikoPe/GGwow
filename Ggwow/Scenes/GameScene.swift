@@ -36,6 +36,11 @@ class GameScene: SKScene {
         
         addChild(umbrellaNode)
         addChild(ballNode)
+        run(SKAction.wait(forDuration: 3)) {
+            let coin = CoinNode(radius: 30, life: 8)
+            coin.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+            self.addChild(coin)
+        }
     }
     
     private func setupBackground() {

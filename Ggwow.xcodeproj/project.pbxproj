@@ -23,6 +23,7 @@
 		7FA1DF2D2850FE4400CADAAC /* impact1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF282850FE4400CADAAC /* impact1.mp3 */; };
 		7FA1DF2E2850FE4400CADAAC /* impact4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF292850FE4400CADAAC /* impact4.mp3 */; };
 		7FA1DF2F2850FE4400CADAAC /* impact5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1DF2A2850FE4400CADAAC /* impact5.mp3 */; };
+		7FA1DF3128510D1800CADAAC /* CoinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1DF3028510D1800CADAAC /* CoinNode.swift */; };
 		7FA4535528509D77008170C7 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4535428509D77008170C7 /* WallNode.swift */; };
 		7FF30EE1284F8FB90014DEB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */; };
 		7FF30EE3284F8FB90014DEB4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7FF30EE2284F8FB90014DEB4 /* GameScene.sks */; };
@@ -53,6 +54,7 @@
 		7FA1DF282850FE4400CADAAC /* impact1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact1.mp3; sourceTree = "<group>"; };
 		7FA1DF292850FE4400CADAAC /* impact4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact4.mp3; sourceTree = "<group>"; };
 		7FA1DF2A2850FE4400CADAAC /* impact5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = impact5.mp3; sourceTree = "<group>"; };
+		7FA1DF3028510D1800CADAAC /* CoinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNode.swift; sourceTree = "<group>"; };
 		7FA4535428509D77008170C7 /* WallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallNode.swift; sourceTree = "<group>"; };
 		7FF30EDD284F8FB90014DEB4 /* Ggwow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ggwow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,15 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		7FA1DF322851170F00CADAAC /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1DF092850ECE300CADAAC /* SparkParticle.sks */,
+				7FA1DF0A2850ECE300CADAAC /* Assets.xcassets */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		7FF30ED4284F8FB90014DEB4 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +137,7 @@
 			children = (
 				7FF30EE0284F8FB90014DEB4 /* AppDelegate.swift */,
 				7FA1DF0D2850F5D800CADAAC /* Sounds */,
+				7FA1DF322851170F00CADAAC /* Particles */,
 				7FF30EFB284F97630014DEB4 /* Scenes */,
 				7FF30EF9284F97530014DEB4 /* Nodes */,
 				7FF30EFA284F975A0014DEB4 /* Constrollers */,
@@ -142,10 +154,9 @@
 			isa = PBXGroup;
 			children = (
 				7FF30EF7284F96F10014DEB4 /* BallNode.swift */,
-				7FA1DF092850ECE300CADAAC /* SparkParticle.sks */,
-				7FA1DF0A2850ECE300CADAAC /* Assets.xcassets */,
 				7FF30EFC284F9CCD0014DEB4 /* UmbrellaNode.swift */,
 				7FA4535428509D77008170C7 /* WallNode.swift */,
+				7FA1DF3028510D1800CADAAC /* CoinNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -263,6 +274,7 @@
 			files = (
 				7FF30EE7284F8FB90014DEB4 /* GameScene.swift in Sources */,
 				7FF30EE9284F8FB90014DEB4 /* GameViewController.swift in Sources */,
+				7FA1DF3128510D1800CADAAC /* CoinNode.swift in Sources */,
 				7FF30EF8284F96F10014DEB4 /* BallNode.swift in Sources */,
 				7F4E589728508CAE00704EE2 /* Extensions.swift in Sources */,
 				7F987FE5284FDD22004A7717 /* CollisionsDelegation.swift in Sources */,
