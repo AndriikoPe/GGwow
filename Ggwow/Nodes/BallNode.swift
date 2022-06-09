@@ -25,15 +25,12 @@ class BallNode: SKSpriteNode {
     }
     
     func enable() {
-        // If physicsBody is enabled, consider ball already enabled.
         guard !isActivated else { return }
         
         physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2.0)
         physicsBody?.categoryBitMask = Collisions.ball.rawValue
         physicsBody?.collisionBitMask = Collisions.umbrella.rawValue | Collisions.wall.rawValue
-        physicsBody?.contactTestBitMask = Collisions.umbrella.rawValue |
-            Collisions.wall.rawValue |
-            Collisions.ground.rawValue
+        physicsBody?.contactTestBitMask = Collisions.umbrella.rawValue | Collisions.wall.rawValue |  Collisions.ground.rawValue | Collisions.coin.rawValue
         physicsBody?.usesPreciseCollisionDetection = true
         physicsBody?.mass = 0.01
         

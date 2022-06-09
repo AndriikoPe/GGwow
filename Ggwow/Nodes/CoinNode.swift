@@ -23,12 +23,13 @@ class CoinNode: SKSpriteNode {
         
         setupCoin()
         setupCountdownLabel()
+        setupPhysics()
     }
     
     private func setupCountdownLabel() {
-        label = SKLabelNode(fontNamed: "HelveticaNeue")
+        label = SKLabelNode(fontNamed: "Helvetica Bold")
         guard let label = label else { return }
-        label.fontSize = radius
+        label.fontSize = radius / 2
         label.zPosition = 30
         label.verticalAlignmentMode = .center
         setupLabelText()
@@ -52,16 +53,25 @@ class CoinNode: SKSpriteNode {
     
     private func setupLabelText() {
         label?.text = "\(timeToLive)"
-        label?.fontColor = timeToLive < 4 ? .red : .white
+        label?.fontColor = timeToLive < 4 ? .red : .black
     }
     
     private func setupCoin() {
-        let coin = SKShapeNode(circleOfRadius: radius)
-        coin.strokeColor = .systemYellow
-        coin.fillColor = .systemYellow
+        let texture = SKTexture(imageNamed: "coin")
+        let coin = SKSpriteNode(texture: texture, size: size)
         coin.zPosition = 20
         
         addChild(coin)
+    }
+    
+    private func setupPhysics() {
+        physicsBody = SKPhysicsBody(circleOfRadius: radius)
+        
+        physicsBody?.pinned = true
+        physicsBody?.allowsRotation = false
+        
+        physicsBody?.categoryBitMask = Collisions.coin.rawValue
+        physicsBody?.contactTestBitMask = Collisions.ball.rawValue
     }
     
     required init?(coder aDecoder: NSCoder) {

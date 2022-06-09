@@ -32,15 +32,10 @@ class GameScene: SKScene {
         
         ballNode = BallNode(radius: ballRadius)
         ballNode.position = CGPoint(x: centerX, y: size.height / 2)
-        setupWalls()
+        setupBoundaries()
         
         addChild(umbrellaNode)
         addChild(ballNode)
-        run(SKAction.wait(forDuration: 3)) {
-            let coin = CoinNode(radius: 30, life: 8)
-            coin.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-            self.addChild(coin)
-        }
     }
     
     private func setupBackground() {
@@ -53,8 +48,10 @@ class GameScene: SKScene {
         addChild(background)
     }
     
-    private func setupWalls() {
+    private func setupBoundaries() {
         let centerY = size.height / 2
+        let centerX = size.width / 2
+        
         let leftWall = WallNode(
             at: CGPoint(x: 10, y: centerY),
             CGSize(width: 20, height: size.height)
@@ -62,7 +59,7 @@ class GameScene: SKScene {
         
         let topInset = view!.safeAreaInsets.top
         let topWall = WallNode(
-            at: CGPoint(x: size.width / 2, y: size.height),
+            at: CGPoint(x: centerX, y: size.height),
             CGSize(width: size.width, height: 20 + 2 * topInset)
         )
         let rightWall = WallNode(
@@ -70,9 +67,16 @@ class GameScene: SKScene {
             CGSize(width: 20, height: size.height)
         )
         
+        let ground = GroundNode(
+            at: CGPoint(x: centerX, y: 10),
+            CGSize(width: size.width, height: 20)
+        )
+        ground.zPosition = 1
+        
         addChild(leftWall)
         addChild(topWall)
         addChild(rightWall)
+        addChild(ground)
     }
     
     // MARK: - Touches.
@@ -89,6 +93,7 @@ class GameScene: SKScene {
             setUmbrellaXPosition(to: touch.location(in: self).x)
         } else {
             ballNode.enable()
+            startCoinSpawner()
         }
     }
     
@@ -105,5 +110,31 @@ class GameScene: SKScene {
         if umbrellaPositionRange ~= newX {
             umbrellaNode.position.x = newX
         }
+    }
+    
+    // MARK: - Coins.
+    
+    private func startCoinSpawner() {
+        let coinSpawner = SKAction.sequence([.wait(forDuration: 5), .run(spawnCoins)])
+        run(SKAction.repeatForever(coinSpawner))
+    }
+    
+    private func spawnCoins() {
+        for _ in 0...Int.random(in: 2...5) {
+            let coin = CoinNode(radius: 30, life: Int.random(in: 5...8))
+            let x = CGFloat.random(in: 50...(size.width - 50))
+            let y = CGFloat.random(
+                in: (umbrellaSize.height + 50)...(size.height - 50 - (view?.safeAreaInsets.top ?? 0))
+            )
+            coin.position = CGPoint(x: x, y: y)
+            self.addChild(coin)
+        }
+    }
+    
+    // MARK: - Lose.
+    
+    func lose() {
+        let loseScene = LoseGameScene(size: size)
+        view?.presentScene(loseScene, transition: .fade(withDuration: 1))
     }
 }

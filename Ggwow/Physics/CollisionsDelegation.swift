@@ -18,6 +18,8 @@ extension GameScene: SKPhysicsContactDelegate {
             ballWall()
         case ContactType.ballGround.rawValue:
             ballGround()
+        case ContactType.ballCoin.rawValue:
+            ballCoin(contact.bodyA, contact.bodyB)
         default: break
         }
     }
@@ -31,6 +33,14 @@ extension GameScene: SKPhysicsContactDelegate {
     }
     
     private func ballGround() {
-        
+        lose()
+    }
+    
+    private func ballCoin(_ bodyA: SKPhysicsBody, _ bodyB: SKPhysicsBody) {
+        if let coin = bodyA.node as? CoinNode {
+            coin.removeFromParent()
+        } else if let coin = bodyB.node as? CoinNode {
+            coin.removeFromParent()
+        }
     }
 }

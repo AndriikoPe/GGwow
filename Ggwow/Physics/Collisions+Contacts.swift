@@ -12,12 +12,14 @@ enum Collisions: UInt32 {
     case umbrella = 2
     case wall = 4
     case ground = 8
+    case coin = 16
 }
 
 enum ContactType: CaseIterable {
     case ballUmbrella
     case ballWall
     case ballGround
+    case ballCoin
     
     // Bogus rawValue.
     var rawValue: UInt32 {
@@ -28,6 +30,8 @@ enum ContactType: CaseIterable {
             return Collisions.ball.rawValue | Collisions.wall.rawValue
         case .ballGround:
             return Collisions.ball.rawValue | Collisions.ground.rawValue
+        case .ballCoin:
+            return Collisions.ball.rawValue | Collisions.coin.rawValue
         }
     }
 }
