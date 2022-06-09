@@ -17,6 +17,7 @@ class WallNode: SKSpriteNode {
         physicsBody?.affectedByGravity = false
         physicsBody?.pinned = true
         physicsBody?.allowsRotation = false
+        physicsBody?.isDynamic = false
         physicsBody?.restitution = 0.5
         
         physicsBody?.categoryBitMask = Collisions.wall.rawValue

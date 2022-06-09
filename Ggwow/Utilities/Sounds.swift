@@ -8,6 +8,8 @@
 import SpriteKit
 
 struct Sounds {
+    // MARK: - Sound actions.
+    
     static var impactWall: SKAction {
         allWallImpacts.randomElement()!
     }
@@ -16,9 +18,15 @@ struct Sounds {
         allUmbrellaImpacts.randomElement()!
     }
     
+    static let coin = SKAction.playSoundFileNamed(
+        "coin", waitForCompletion: false
+    )
+    
     static let launch = SKAction.playSoundFileNamed(
         "launch", waitForCompletion: false
     )
+    
+    // MARK: - Collections of sounds.
     
     private static let allWallImpacts = (1...5).map {
         SKAction.playSoundFileNamed(

@@ -10,12 +10,21 @@ import SpriteKit
 class GameScene: SKScene {
     private var umbrellaNode: UmbrellaNode!
     private var ballNode: BallNode!
+    private var coinsLabelNode: CoinsLabelNode!
     
     private let minDX: CGFloat = 0.1
     private let ballRadius: CGFloat = 30.0
     private let umbrellaSize = CGSize(width: 80, height: 80)
     
     private var lastTouchX: CGFloat = 0.0
+    private var coinsCount: Int = UserDefaults.standard.integer(
+        forKey: Constants.coinsUserDefaultsKey
+    ) {
+        didSet {
+            coinsLabelNode.set(text: "\(coinsCount)")
+            UserDefaults.standard.set(coinsCount, forKey: Constants.coinsUserDefaultsKey)
+        }
+    }
     
     private var umbrellaPositionRange: ClosedRange<CGFloat> {
         (umbrellaSize.width / 2)...(size.width - (umbrellaSize.width / 2))
@@ -33,6 +42,7 @@ class GameScene: SKScene {
         ballNode = BallNode(radius: ballRadius)
         ballNode.position = CGPoint(x: centerX, y: size.height / 2)
         setupBoundaries()
+        setupCoinsLabel()
         
         addChild(umbrellaNode)
         addChild(ballNode)
@@ -46,6 +56,20 @@ class GameScene: SKScene {
         background.zPosition = -1
         
         addChild(background)
+    }
+    
+    private func setupCoinsLabel() {
+        let pos = CGPoint(
+            x: 50,
+            y: size.height - view!.safeAreaInsets.top - 50
+        )
+        coinsLabelNode = CoinsLabelNode(
+            at: pos,
+            CGSize(width: size.width * 0.8, height: 50)
+        )
+        coinsLabelNode.set(text: "\(coinsCount)")
+        
+        addChild(coinsLabelNode)
     }
     
     private func setupBoundaries() {
@@ -124,11 +148,15 @@ class GameScene: SKScene {
             let coin = CoinNode(radius: 30, life: Int.random(in: 5...8))
             let x = CGFloat.random(in: 50...(size.width - 50))
             let y = CGFloat.random(
-                in: (umbrellaSize.height + 50)...(size.height - 50 - (view?.safeAreaInsets.top ?? 0))
+                in: (umbrellaSize.height + 100)...(size.height - 50 - (view?.safeAreaInsets.top ?? 0))
             )
             coin.position = CGPoint(x: x, y: y)
             self.addChild(coin)
         }
+    }
+    
+    func addCoin() {
+        coinsCount += 1
     }
     
     // MARK: - Lose.

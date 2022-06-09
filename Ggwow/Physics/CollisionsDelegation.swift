@@ -37,10 +37,10 @@ extension GameScene: SKPhysicsContactDelegate {
     }
     
     private func ballCoin(_ bodyA: SKPhysicsBody, _ bodyB: SKPhysicsBody) {
-        if let coin = bodyA.node as? CoinNode {
-            coin.removeFromParent()
-        } else if let coin = bodyB.node as? CoinNode {
-            coin.removeFromParent()
-        }
+        guard let coin = (bodyA.node as? CoinNode) ?? (bodyB.node as? CoinNode)
+        else { return }
+        run(Sounds.coin)
+        addCoin()
+        coin.removeFromParent()
     }
 }
